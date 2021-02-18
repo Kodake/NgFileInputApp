@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-6 offset-3">
+            <input #myFileInput type="file" ngf [(files)]="file" class="form-control"
+                (change)="validateMaxLength($event)" />
+            <div class="text-danger" *ngIf="fileSizeInvalid === true">
+                El archivo a subir supera el límite de {{ maxFileSize }} MB
+            </div>
+        </div>
+    </div>
+</div>
